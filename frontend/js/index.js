@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", event => {
         api.customer.login(event.target.idCard.value, event.target.password.value).then(data => {
             sessionStorage.setItem("token", data.token);
             sessionStorage.setItem("customer", JSON.stringify(data.customer));
-            location.href = "main.html";
+            location.href = "index1.html";
             // console.log("ok");
         }).catch(error => {
             console.error(error);
@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", event => {
                             "status": true,
                             "password":event.target.password.value}).then(data => {
             sessionStorage.setItem("customer", JSON.stringify(data.customer));
-            location.href = "main.html";
+            location.href = "index1.html";
             // console.log("ok");
         }).catch(error => {
             console.error(error);
